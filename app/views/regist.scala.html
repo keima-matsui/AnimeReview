@@ -1,0 +1,36 @@
+@import views.html.helper
+
+@(userForm: Form[User])
+
+<link rel='stylesheet' href='assets/stylesheets/main.css'>
+<link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+
+
+<div class="container">
+<div class="jumbotron">
+    <h1>これが俺のアニメレビュー</h1>
+    <p>あなたの感想を思う存分吐き出しましょう!</p> 
+  </div>
+
+
+  <div id="signup-box" class="tac margin0">
+ 
+  <p>ユーザ登録</p>
+
+  @helper.form(action = routes.FormSubmit.userSubmit()) {
+    
+    @helper.inputText(userForm("mail"), 'class -> "Title",'size -> "30%", '_label -> "メールアドレス")
+    @helper.inputPassword(userForm("password") ,'size -> "30%", '_label -> "パスワード")
+    @helper.inputText(userForm("age"), 'class -> "Title",'size -> "30%", '_label -> "年齢")
+    @helper.inputText(userForm("nick"), 'class -> "Title",'size -> "30%", '_label -> "ニックネーム")
+    @helper.inputRadioGroup( userForm("sex"), options =
+    Seq("0"->"男　", "1"->"女"), '_label ->
+    "性別")
+    
+    <input type="submit" value="登録" class="btn btn-default navbar-btn" />
+}
+
+ </div>
+  
+</div>

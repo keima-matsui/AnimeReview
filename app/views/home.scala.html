@@ -1,0 +1,57 @@
+@(aniList: List[models.AniListEbean])(jpg: String)
+
+<link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
+<script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1>これが俺のアニメレビュー</h1>
+    <p>あなたの感想を思う存分吐き出しましょう!</p> 
+    <p><a href="/regist">登録</a></p>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+      <h3>最新のユーザレビュー</h3>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+      <p>ポケットモンスター 897話 /　ここ１０年で最高の話　/ ゼニガメさん</p>
+    </div>
+    <div class="col-sm-7" style="margin-bottom:50px;">
+      <h3>最新話</h3>
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+            <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+      <img src="assets/images/logo.jpg" width="180px height="180px" class='img-responsive' style="float:left;margin-left:5px">
+    </div>
+       
+        <div class="col-sm-12">
+      <h3>アニメ一覧</h3>
+      @for(aniLists <-aniList){
+        <img src="assets/images/ani_image/@aniLists.ani_id@jpg" width="180px" height="180px"  style="float:left;margin-left:5px">
+      }
+    </div>
+  </div>
+</div>

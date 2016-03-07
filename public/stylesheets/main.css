@@ -1,0 +1,14 @@
+.tac{
+    text-align:center;
+}
+
+.margin0{
+    margin:0 auto;
+}
+
+#signup-box{
+    border:solid 1px #121212;
+    border-radius:15px;
+    width:50%;
+    
+}
